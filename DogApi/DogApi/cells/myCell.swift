@@ -5,8 +5,6 @@ import UIKit
 class myCell: UITableViewCell {
 
   
-        
-
         var results: String = ""{
             didSet {
                 

@@ -22,6 +22,9 @@
 		25055035280F5F6E00BC741C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055034280F5F6E00BC741C /* ImageViewController.swift */; };
 		25055037280F631100BC741C /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055036280F631100BC741C /* ImageViewCell.swift */; };
 		2505507628105E5C00BC741C /* extensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505507528105E5C00BC741C /* extensionImage.swift */; };
+		251B308C28132F940089588D /* apiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B308B28132F940089588D /* apiImages.swift */; };
+		251B308E281338070089588D /* ApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B308D281338070089588D /* ApiRest.swift */; };
+		251B309028133B360089588D /* ApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B308F28133B360089588D /* ApiMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		25055034280F5F6E00BC741C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		25055036280F631100BC741C /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		2505507528105E5C00BC741C /* extensionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionImage.swift; sourceTree = "<group>"; };
+		251B308B28132F940089588D /* apiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiImages.swift; sourceTree = "<group>"; };
+		251B308D281338070089588D /* ApiRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRest.swift; sourceTree = "<group>"; };
+		251B308F28133B360089588D /* ApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +121,15 @@
 				25055038280F631A00BC741C /* cells */,
 				2505502A280F151600BC741C /* structs */,
 				25055030280F169900BC741C /* api.swift */,
+				251B308B28132F940089588D /* apiImages.swift */,
 				25054FF6280F0E2500BC741C /* ViewController.swift */,
 				25055034280F5F6E00BC741C /* ImageViewController.swift */,
 				25054FFB280F0E2700BC741C /* Assets.xcassets */,
 				25054FFD280F0E2700BC741C /* LaunchScreen.storyboard */,
 				25055000280F0E2700BC741C /* Info.plist */,
 				25054FF2280F0E2500BC741C /* AppDelegate.swift */,
+				251B308D281338070089588D /* ApiRest.swift */,
+				251B308F28133B360089588D /* ApiMock.swift */,
 			);
 			path = DogApi;
 			sourceTree = "<group>";
@@ -301,11 +310,14 @@
 			files = (
 				25054FF7280F0E2500BC741C /* ViewController.swift in Sources */,
 				2505502F280F158A00BC741C /* Breed.swift in Sources */,
+				251B309028133B360089588D /* ApiMock.swift in Sources */,
 				25055035280F5F6E00BC741C /* ImageViewController.swift in Sources */,
 				25055027280F121200BC741C /* myCell.swift in Sources */,
+				251B308E281338070089588D /* ApiRest.swift in Sources */,
 				2505507628105E5C00BC741C /* extensionImage.swift in Sources */,
 				2505502C280F152900BC741C /* Dog.swift in Sources */,
 				25055029280F141E00BC741C /* ExtensionUiview.swift in Sources */,
+				251B308C28132F940089588D /* apiImages.swift in Sources */,
 				25054FF3280F0E2500BC741C /* AppDelegate.swift in Sources */,
 				25055031280F169900BC741C /* api.swift in Sources */,
 				25055037280F631100BC741C /* ImageViewCell.swift in Sources */,

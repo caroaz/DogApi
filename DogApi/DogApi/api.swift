@@ -1,8 +1,7 @@
 
 import Foundation
-final class miApi {
+class miApi: ApiRest {
     
-    static let shared = miApi()
     //    func que obtenga los datos de la api()
     func fetchData(onCompletion: @escaping ( [String]?, APIError?) -> Void) {
         let url = URL(string: "https://dog.ceo/api/breeds/list")!
@@ -26,6 +25,30 @@ final class miApi {
         }
         task.resume()
     }
+    
+    func fetchDataImages(dataContent: String, onCompletion: @escaping ( [String]?, APIError?) -> Void) {
+        let url = URL(string: "https://dog.ceo/api/breed/\(dataContent)/images")!
+        
+        //        hacer un task (tarea) para guardar datos
+        let task = URLSession.shared.dataTask(with: url){
+            //            cuando tenga los datos los almacenara en la variable data,el error en variable error y si hay un codigo de respuesta en response
+            (data, response, error ) in
+            guard let data = data else {
+                onCompletion(nil, APIError(message: "Invalid model"))
+                return}
+            // ejecutara el codigo en esta sección y retornara error si no se puede decodoficar
+            guard  let breedList = try? JSONDecoder().decode(Breed.self, from: data) else {
+                onCompletion(nil, APIError(message: "Invalid request"))
+                return
+            }
+            
+            onCompletion(breedList.message, nil)
+            
+            
+        }
+        task.resume()
+    }
+
 }
 
 

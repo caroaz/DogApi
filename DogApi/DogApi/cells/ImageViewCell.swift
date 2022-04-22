@@ -8,6 +8,7 @@ private var prepared = false
     private var imageDog = UIImageView()
     var results1: String? = ""{
         didSet {
+            
             guard let results1 =  results1 else {return}
 
             let url = URL(string: results1)
