@@ -15,9 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        let restApi = miApi()
+        
+//    instancias clase CallApiDog
+        let restApi = CallApiDog()
+        
+//        crear instancia viewController
         let viewController = ViewController()
-        viewController.miApi = restApi
+        viewController.callApi = restApi
+//        cambiar root ViewController() por instancia de viewController
         let navigationController = UINavigationController(rootViewController:  viewController)
         window?.rootViewController = navigationController
         return true

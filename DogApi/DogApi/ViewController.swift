@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     
     var tableView = UITableView ()
     
-    var miApi : ApiRest?
+    var callApi : ApiRest?
     
     
     struct Cells{
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         title = "DogCeo"
         configureTableView()
         
-        miApi?.fetchData { dogs, error in
+        callApi?.fetchData { dogs, error in
             
             DispatchQueue.main.async {
                 guard let dogs = dogs else {

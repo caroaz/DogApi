@@ -1,9 +1,4 @@
-//
-//  ImageViewController.swift
-//  DogApi
-//
-//  Created by Mobdev on 19-04-22.
-//
+
 
 import UIKit
 
@@ -28,7 +23,7 @@ class ImageViewController: UIViewController {
         configureTableImageView()
         
         
-        miApi().fetchDataImages(dataContent: dataContent) { breeds, error in
+        CallApiDog().fetchDataImages(nameBreed: dataContent) { breeds, error in
             //
             DispatchQueue.main.async {
                 guard let breeds = breeds else {
@@ -109,7 +104,7 @@ extension ImageViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:Cells.mycell, for: indexPath as IndexPath) as? ImageViewCell else { return UITableViewCell()}
         
-        cell.results1 =  breedList[indexPath.row]
+        cell.resultsBreedName =  breedList[indexPath.row]
         
         cell.prepare()
         

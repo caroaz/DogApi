@@ -1,6 +1,6 @@
 
 import Foundation
-class miApi: ApiRest {
+class CallApiDog: ApiRest {
     
     //    func que obtenga los datos de la api()
     func fetchData(onCompletion: @escaping ( [String]?, APIError?) -> Void) {
@@ -26,8 +26,8 @@ class miApi: ApiRest {
         task.resume()
     }
     
-    func fetchDataImages(dataContent: String, onCompletion: @escaping ( [String]?, APIError?) -> Void) {
-        let url = URL(string: "https://dog.ceo/api/breed/\(dataContent)/images")!
+    func fetchDataImages(nameBreed: String, onCompletion: @escaping ( [String]?, APIError?) -> Void) {
+        let url = URL(string: "https://dog.ceo/api/breed/\(nameBreed)/images")!
         
         //        hacer un task (tarea) para guardar datos
         let task = URLSession.shared.dataTask(with: url){
@@ -48,7 +48,7 @@ class miApi: ApiRest {
         }
         task.resume()
     }
-
+    
 }
 
 
