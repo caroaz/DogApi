@@ -94,6 +94,7 @@ extension ViewController: UITableViewDelegate{
         
         let vcDetail = ImageViewController()
         vcDetail.dataContent = dogList[indexPath.row]
+        vcDetail.callApi = CallApiDog()
         
         
         navigationController?.pushViewController(vcDetail, animated: true)

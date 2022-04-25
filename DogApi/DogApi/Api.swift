@@ -2,6 +2,10 @@
 import Foundation
 class CallApiDog: ApiRest {
     
+    private let urlSession : URLSession
+    init (session: URLSession = URLSession.shared){
+        urlSession = session
+    }
     //    func que obtenga los datos de la api()
     func fetchData(onCompletion: @escaping ( [String]?, APIError?) -> Void) {
         let url = URL(string: "https://dog.ceo/api/breeds/list")!
@@ -30,7 +34,7 @@ class CallApiDog: ApiRest {
         let url = URL(string: "https://dog.ceo/api/breed/\(nameBreed)/images")!
         
         //        hacer un task (tarea) para guardar datos
-        let task = URLSession.shared.dataTask(with: url){
+        let task = urlSession.dataTask(with: url){
             //            cuando tenga los datos los almacenara en la variable data,el error en variable error y si hay un codigo de respuesta en response
             (data, response, error ) in
             guard let data = data else {

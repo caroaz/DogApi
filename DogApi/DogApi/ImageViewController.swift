@@ -9,6 +9,7 @@ class ImageViewController: UIViewController {
     var breedList :  [String] = []
     
     var tableImageView = UITableView ()
+    var callApi : ApiRest?
     
     
     struct Cells{
@@ -23,7 +24,7 @@ class ImageViewController: UIViewController {
         configureTableImageView()
         
         
-        CallApiDog().fetchDataImages(nameBreed: dataContent) { breeds, error in
+        callApi?.fetchDataImages(nameBreed: dataContent) { breeds, error in
             //
             DispatchQueue.main.async {
                 guard let breeds = breeds else {
