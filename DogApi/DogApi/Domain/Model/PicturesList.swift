@@ -1,5 +1,4 @@
-
 import Foundation
-struct Dog: Decodable {
+struct PicturesList: Decodable {
     let message: [String]
 }

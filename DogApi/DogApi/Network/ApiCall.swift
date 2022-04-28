@@ -7,7 +7,7 @@ class CallApiDog: ApiRest {
         urlSession = session
     }
     //    func que obtenga los datos de la api()
-    func fetchData(onCompletion: @escaping ( [String]?, APIError?) -> Void) {
+    func fetchApiData(onCompletion: @escaping ( [String]?, APIError?) -> Void) {
         let url = URL(string: "https://dog.ceo/api/breeds/list")!
         
         //        hacer un task (tarea) para guardar datos
@@ -15,15 +15,15 @@ class CallApiDog: ApiRest {
             //            cuando tenga los datos los almacenara en la variable data,el error en variable error y si hay un codigo de respuesta en response
             (data, response, error ) in
             guard let data = data else {
-                onCompletion(nil, APIError(message: "Invalid model"))
+                onCompletion(nil, APIError(errorMessage: "Invalid model"))
                 return}
             // ejecutara el codigo en esta sección y retornara error si no se puede decodoficar
-            guard  let dogList = try? JSONDecoder().decode(Dog.self, from: data) else {
-                onCompletion(nil, APIError(message: "Invalid request"))
+            guard  let breedsList = try? JSONDecoder().decode(BreedsList.self, from: data) else {
+                onCompletion(nil, APIError(errorMessage: "Invalid model"))
                 return
             }// con self indica que es un tipo de objeto, no es algo que estoy creando
             
-            onCompletion(dogList.message, nil)
+            onCompletion(breedsList.message, nil)
             
             
         }
@@ -38,15 +38,15 @@ class CallApiDog: ApiRest {
             //            cuando tenga los datos los almacenara en la variable data,el error en variable error y si hay un codigo de respuesta en response
             (data, response, error ) in
             guard let data = data else {
-                onCompletion(nil, APIError(message: "Invalid model"))
+                onCompletion(nil, APIError(errorMessage: "Invalid model"))
                 return}
             // ejecutara el codigo en esta sección y retornara error si no se puede decodoficar
-            guard  let breedList = try? JSONDecoder().decode(Breed.self, from: data) else {
-                onCompletion(nil, APIError(message: "Invalid request"))
+            guard  let picturesList = try? JSONDecoder().decode(PicturesList.self, from: data) else {
+                onCompletion(nil, APIError(errorMessage: "Invalid request"))
                 return
             }
             
-            onCompletion(breedList.message, nil)
+            onCompletion(picturesList.message, nil)
             
             
         }
@@ -57,8 +57,4 @@ class CallApiDog: ApiRest {
 
 
 
-
-struct APIError {
-    let message: String
-}
 

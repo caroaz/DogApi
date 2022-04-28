@@ -8,8 +8,7 @@ class ViewController: UIViewController {
     
     var tableView = UITableView ()
     
-    var callApi : ApiRest?
-    
+    var dogRepository: DogRepository?
     
     struct Cells{
         static let mycell = "my cell"
@@ -23,14 +22,14 @@ class ViewController: UIViewController {
         title = "DogCeo"
         configureTableView()
         
-        callApi?.fetchData { dogs, error in
+        dogRepository?.fetchDogBreeds{ dogs, error in
             
             DispatchQueue.main.async {
                 guard let dogs = dogs else {
-                    print(error?.message ?? "error")
+                    print(error?.description ?? "error")
                     return
                 }
-                self.dogList = dogs
+                self.dogList = dogs.message
                 self.tableView.reloadData()
             }
         }
@@ -94,7 +93,12 @@ extension ViewController: UITableViewDelegate{
         
         let vcDetail = ImageViewController()
         vcDetail.dataContent = dogList[indexPath.row]
-        vcDetail.callApi = CallApiDog()
+      
+        
+        let restApiCall = CallApiDog()
+        let mapper = BreedListToArrayMapper()
+
+        vcDetail.dogImagesRepository = DogApiRepository(restApi: restApiCall, mapper: mapper)
         
         
         navigationController?.pushViewController(vcDetail, animated: true)
