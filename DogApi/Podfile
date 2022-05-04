@@ -1,0 +1,5 @@
+platform :ios, '15.4'
+
+target 'DogApiTests' do 
+    pod 'Mimic'
+end 

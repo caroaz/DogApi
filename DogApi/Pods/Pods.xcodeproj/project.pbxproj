@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F439AB1FDDCB9A8CD5670138DB08A31 /* Pods-DogApiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6533CC9F0D3473190FF270E17E4DB6 /* Pods-DogApiTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11C912B87937818C68D4664EB30EF5CF /* MimicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17837EE89D284E60B25EB0FD6B6D1EEC /* MimicProtocol.swift */; };
+		22D730DDB3661F790A1DE7965207B056 /* Pods-DogApiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25996394A3CEE6B4AD72CF25F47A3F81 /* Pods-DogApiTests-dummy.m */; };
+		3410C04112E36D8DED534B322EEEB200 /* MimicHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F888FB2C777A08EF21E5893ACF50005 /* MimicHTTPMethod.swift */; };
+		49718DD9A6C5238CB81F03F35272D811 /* MimicResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10706C84F3618FD4E5FC1B505C61705 /* MimicResponseType.swift */; };
+		6F3860C99C2E108F31617CB7841787F6 /* MimicContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E4B7BA6B8D33A32FACA6261A3EB79 /* MimicContent.swift */; };
+		754247125B7CC7A124B409D948273BF5 /* URLSessionConfiguration+Mimic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739278BB6AB6018CE328B74E6DB29E9 /* URLSessionConfiguration+Mimic.swift */; };
+		83A16E8441C5F0ABF77E41525968B796 /* MimicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65868461543CB432536E6E86963B14C1 /* MimicObject.swift */; };
+		99511E5E559A08F2B47CA9A3965EBB6C /* Mimic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94955013F69A89214FBAF8FBD5FEF44A /* Mimic-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C9022345721931C182BAB419A8DF7E98 /* Mimic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 057A1F35989EFD0940D6A54089F2BCC4 /* Mimic-dummy.m */; };
+		F5415C4D7D4E6F3072C06EA231C70EF8 /* Mimic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867809996C6CDD30612B0EE095C7A06 /* Mimic.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C6F082BB3DB2BAEA2060E17C0730BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECA69F7BDEABE9E4F0C64293F456329A;
+			remoteInfo = Mimic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		057A1F35989EFD0940D6A54089F2BCC4 /* Mimic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mimic-dummy.m"; sourceTree = "<group>"; };
+		0EF04F09CE5FD71D30F54F3966785A79 /* Pods-DogApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DogApiTests.release.xcconfig"; sourceTree = "<group>"; };
+		16912C7D275B21485CA390D724D51604 /* Pods-DogApiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DogApiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		17837EE89D284E60B25EB0FD6B6D1EEC /* MimicProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimicProtocol.swift; path = Sources/MimicProtocol.swift; sourceTree = "<group>"; };
+		25996394A3CEE6B4AD72CF25F47A3F81 /* Pods-DogApiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DogApiTests-dummy.m"; sourceTree = "<group>"; };
+		2739278BB6AB6018CE328B74E6DB29E9 /* URLSessionConfiguration+Mimic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Mimic.swift"; path = "Sources/URLSessionConfiguration+Mimic.swift"; sourceTree = "<group>"; };
+		3F888FB2C777A08EF21E5893ACF50005 /* MimicHTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimicHTTPMethod.swift; path = Sources/MimicHTTPMethod.swift; sourceTree = "<group>"; };
+		4FAD3CAB2D2EDC4002334F1269D94630 /* Pods-DogApiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DogApiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53D1A3BBF8EBE1888E5A1CDB4C5ADA39 /* Pods-DogApiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DogApiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A1045C3C6A6C0EB6A67C78F39ACEBA9 /* Mimic */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Mimic; path = libMimic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65868461543CB432536E6E86963B14C1 /* MimicObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimicObject.swift; path = Sources/MimicObject.swift; sourceTree = "<group>"; };
+		669808ED33032830652E4CC4953C3157 /* Mimic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mimic.release.xcconfig; sourceTree = "<group>"; };
+		73794D946116122F9CA731A6AE7D75BC /* Pods-DogApiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DogApiTests.modulemap"; sourceTree = "<group>"; };
+		7E9F156A4D99DC6914CD7F5623C24AE0 /* Mimic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mimic.debug.xcconfig; sourceTree = "<group>"; };
+		828E4B7BA6B8D33A32FACA6261A3EB79 /* MimicContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimicContent.swift; path = Sources/MimicContent.swift; sourceTree = "<group>"; };
+		8B6533CC9F0D3473190FF270E17E4DB6 /* Pods-DogApiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DogApiTests-umbrella.h"; sourceTree = "<group>"; };
+		94955013F69A89214FBAF8FBD5FEF44A /* Mimic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mimic-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BDA1BD40DC47311C4C5E55D8E3457EA1 /* Pods-DogApiTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DogApiTests"; path = "libPods-DogApiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10706C84F3618FD4E5FC1B505C61705 /* MimicResponseType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimicResponseType.swift; path = Sources/MimicResponseType.swift; sourceTree = "<group>"; };
+		D2B85BDE2268416009338CC14E1806B3 /* Mimic-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mimic-prefix.pch"; sourceTree = "<group>"; };
+		E867809996C6CDD30612B0EE095C7A06 /* Mimic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mimic.swift; path = Sources/Mimic.swift; sourceTree = "<group>"; };
+		E97A8A8B492B873EAF76C5ED0AF4879F /* Mimic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Mimic.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BE2E43D8AA07C769D6EBBF816E10846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7664E84C7742BE5A460EB39FBAB5BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18111EB9EEF0B61B56C4D600598AF121 /* Mimic */ = {
+			isa = PBXGroup;
+			children = (
+				E867809996C6CDD30612B0EE095C7A06 /* Mimic.swift */,
+				828E4B7BA6B8D33A32FACA6261A3EB79 /* MimicContent.swift */,
+				3F888FB2C777A08EF21E5893ACF50005 /* MimicHTTPMethod.swift */,
+				65868461543CB432536E6E86963B14C1 /* MimicObject.swift */,
+				17837EE89D284E60B25EB0FD6B6D1EEC /* MimicProtocol.swift */,
+				C10706C84F3618FD4E5FC1B505C61705 /* MimicResponseType.swift */,
+				2739278BB6AB6018CE328B74E6DB29E9 /* URLSessionConfiguration+Mimic.swift */,
+				9F3A89AD2BA0B789A35F2F8A77C6361E /* Support Files */,
+			);
+			name = Mimic;
+			path = Mimic;
+			sourceTree = "<group>";
+		};
+		2339DA28B6DB43A1918FA84465FB1FCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A1045C3C6A6C0EB6A67C78F39ACEBA9 /* Mimic */,
+				BDA1BD40DC47311C4C5E55D8E3457EA1 /* Pods-DogApiTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AD97481CD4197376642E7F1B1EC0FBA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				513637355029B808CC40E4396965046D /* Pods-DogApiTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		513637355029B808CC40E4396965046D /* Pods-DogApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				73794D946116122F9CA731A6AE7D75BC /* Pods-DogApiTests.modulemap */,
+				4FAD3CAB2D2EDC4002334F1269D94630 /* Pods-DogApiTests-acknowledgements.markdown */,
+				16912C7D275B21485CA390D724D51604 /* Pods-DogApiTests-acknowledgements.plist */,
+				25996394A3CEE6B4AD72CF25F47A3F81 /* Pods-DogApiTests-dummy.m */,
+				8B6533CC9F0D3473190FF270E17E4DB6 /* Pods-DogApiTests-umbrella.h */,
+				53D1A3BBF8EBE1888E5A1CDB4C5ADA39 /* Pods-DogApiTests.debug.xcconfig */,
+				0EF04F09CE5FD71D30F54F3966785A79 /* Pods-DogApiTests.release.xcconfig */,
+			);
+			name = "Pods-DogApiTests";
+			path = "Target Support Files/Pods-DogApiTests";
+			sourceTree = "<group>";
+		};
+		589A5AF164C8ED321824C5C2C8C2F2E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18111EB9EEF0B61B56C4D600598AF121 /* Mimic */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F3A89AD2BA0B789A35F2F8A77C6361E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E97A8A8B492B873EAF76C5ED0AF4879F /* Mimic.modulemap */,
+				057A1F35989EFD0940D6A54089F2BCC4 /* Mimic-dummy.m */,
+				D2B85BDE2268416009338CC14E1806B3 /* Mimic-prefix.pch */,
+				94955013F69A89214FBAF8FBD5FEF44A /* Mimic-umbrella.h */,
+				7E9F156A4D99DC6914CD7F5623C24AE0 /* Mimic.debug.xcconfig */,
+				669808ED33032830652E4CC4953C3157 /* Mimic.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Mimic";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				589A5AF164C8ED321824C5C2C8C2F2E1 /* Pods */,
+				2339DA28B6DB43A1918FA84465FB1FCC /* Products */,
+				4AD97481CD4197376642E7F1B1EC0FBA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A0F4F7A0B1E8BCE6FB82D05D39F1AC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F439AB1FDDCB9A8CD5670138DB08A31 /* Pods-DogApiTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6FF992A75EB97332C56B300C5BCF326 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99511E5E559A08F2B47CA9A3965EBB6C /* Mimic-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		40A770FFC47EE377E1F90BF12928B156 /* Pods-DogApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20C1AA14968CA08975CDF1323E722BE /* Build configuration list for PBXNativeTarget "Pods-DogApiTests" */;
+			buildPhases = (
+				0A0F4F7A0B1E8BCE6FB82D05D39F1AC7 /* Headers */,
+				156FF89E09AAB40FA80C85E717D8AADD /* Sources */,
+				E7664E84C7742BE5A460EB39FBAB5BE1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB16CD91F7EF4BFB969996008271CE80 /* PBXTargetDependency */,
+			);
+			name = "Pods-DogApiTests";
+			productName = "Pods-DogApiTests";
+			productReference = BDA1BD40DC47311C4C5E55D8E3457EA1 /* Pods-DogApiTests */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECA69F7BDEABE9E4F0C64293F456329A /* Mimic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E6C3704D88B30EF02CBD8878F4D7EC /* Build configuration list for PBXNativeTarget "Mimic" */;
+			buildPhases = (
+				D6FF992A75EB97332C56B300C5BCF326 /* Headers */,
+				9B7EDD419A1D9B9886DF9D8F4889FC2E /* Sources */,
+				5BE2E43D8AA07C769D6EBBF816E10846 /* Frameworks */,
+				61F121BC69F1F458FE3723FF15E7725D /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mimic;
+			productName = Mimic;
+			productReference = 5A1045C3C6A6C0EB6A67C78F39ACEBA9 /* Mimic */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2339DA28B6DB43A1918FA84465FB1FCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECA69F7BDEABE9E4F0C64293F456329A /* Mimic */,
+				40A770FFC47EE377E1F90BF12928B156 /* Pods-DogApiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61F121BC69F1F458FE3723FF15E7725D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Mimic/Mimic.modulemap",
+				"${PODS_ROOT}/Headers/Public/Mimic/Mimic-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Mimic-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Mimic/Mimic.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Mimic/Mimic-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		156FF89E09AAB40FA80C85E717D8AADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D730DDB3661F790A1DE7965207B056 /* Pods-DogApiTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7EDD419A1D9B9886DF9D8F4889FC2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5415C4D7D4E6F3072C06EA231C70EF8 /* Mimic.swift in Sources */,
+				C9022345721931C182BAB419A8DF7E98 /* Mimic-dummy.m in Sources */,
+				6F3860C99C2E108F31617CB7841787F6 /* MimicContent.swift in Sources */,
+				3410C04112E36D8DED534B322EEEB200 /* MimicHTTPMethod.swift in Sources */,
+				83A16E8441C5F0ABF77E41525968B796 /* MimicObject.swift in Sources */,
+				11C912B87937818C68D4664EB30EF5CF /* MimicProtocol.swift in Sources */,
+				49718DD9A6C5238CB81F03F35272D811 /* MimicResponseType.swift in Sources */,
+				754247125B7CC7A124B409D948273BF5 /* URLSessionConfiguration+Mimic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB16CD91F7EF4BFB969996008271CE80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mimic;
+			target = ECA69F7BDEABE9E4F0C64293F456329A /* Mimic */;
+			targetProxy = 5C6F082BB3DB2BAEA2060E17C0730BCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BBA915CB7E13BDB7CA398FE77648639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF04F09CE5FD71D30F54F3966785A79 /* Pods-DogApiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DogApiTests/Pods-DogApiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		862C0AB98798313D2755EAA0D42C9D0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669808ED33032830652E4CC4953C3157 /* Mimic.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Mimic/Mimic-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Mimic/Mimic.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Mimic;
+				PRODUCT_NAME = Mimic;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BA1255A76D22D1A0232CA4379B8447A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9F156A4D99DC6914CD7F5623C24AE0 /* Mimic.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Mimic/Mimic-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Mimic/Mimic.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Mimic;
+				PRODUCT_NAME = Mimic;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92486E5E72E54FAF60E1A7D022C21B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		934ED2B84836A780113D1F63484628B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CBEA6B83B3DC8EE3095EC7D09A45DA7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D1A3BBF8EBE1888E5A1CDB4C5ADA39 /* Pods-DogApiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DogApiTests/Pods-DogApiTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				934ED2B84836A780113D1F63484628B2 /* Debug */,
+				92486E5E72E54FAF60E1A7D022C21B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E6C3704D88B30EF02CBD8878F4D7EC /* Build configuration list for PBXNativeTarget "Mimic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA1255A76D22D1A0232CA4379B8447A /* Debug */,
+				862C0AB98798313D2755EAA0D42C9D0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20C1AA14968CA08975CDF1323E722BE /* Build configuration list for PBXNativeTarget "Pods-DogApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBEA6B83B3DC8EE3095EC7D09A45DA7D /* Debug */,
+				1BBA915CB7E13BDB7CA398FE77648639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23F6ECC9F475C20AE185C4BC /* libPods-DogApiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F70D6E0C91DE94F2CD75E32 /* libPods-DogApiTests.a */; };
 		25054FF3280F0E2500BC741C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25054FF2280F0E2500BC741C /* AppDelegate.swift */; };
 		25054FF7280F0E2500BC741C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25054FF6280F0E2500BC741C /* ViewController.swift */; };
 		25054FFC280F0E2700BC741C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25054FFB280F0E2700BC741C /* Assets.xcassets */; };
 		25054FFF280F0E2700BC741C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25054FFD280F0E2700BC741C /* LaunchScreen.storyboard */; };
-		2505500A280F0E2800BC741C /* DogApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055009280F0E2800BC741C /* DogApiTests.swift */; };
+		2505500A280F0E2800BC741C /* CallApiDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055009280F0E2800BC741C /* CallApiDogTests.swift */; };
 		25055014280F0E2800BC741C /* DogApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055013280F0E2800BC741C /* DogApiUITests.swift */; };
 		25055016280F0E2800BC741C /* DogApiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055015280F0E2800BC741C /* DogApiUITestsLaunchTests.swift */; };
 		25055027280F121200BC741C /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055026280F121200BC741C /* myCell.swift */; };
 		25055029280F141E00BC741C /* ExtensionUiview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055028280F141E00BC741C /* ExtensionUiview.swift */; };
-		25055031280F169900BC741C /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055030280F169900BC741C /* ApiCall.swift */; };
+		25055031280F169900BC741C /* CallApiDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055030280F169900BC741C /* CallApiDog.swift */; };
 		25055035280F5F6E00BC741C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055034280F5F6E00BC741C /* ImageViewController.swift */; };
 		25055037280F631100BC741C /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25055036280F631100BC741C /* ImageViewCell.swift */; };
 		2505507628105E5C00BC741C /* extensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505507528105E5C00BC741C /* extensionImage.swift */; };
@@ -57,13 +58,13 @@
 		25054FFE280F0E2700BC741C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25055000280F0E2700BC741C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25055005280F0E2800BC741C /* DogApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25055009280F0E2800BC741C /* DogApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiTests.swift; sourceTree = "<group>"; };
+		25055009280F0E2800BC741C /* CallApiDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallApiDogTests.swift; sourceTree = "<group>"; };
 		2505500F280F0E2800BC741C /* DogApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25055013280F0E2800BC741C /* DogApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiUITests.swift; sourceTree = "<group>"; };
 		25055015280F0E2800BC741C /* DogApiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25055026280F121200BC741C /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		25055028280F141E00BC741C /* ExtensionUiview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiview.swift; sourceTree = "<group>"; };
-		25055030280F169900BC741C /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		25055030280F169900BC741C /* CallApiDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallApiDog.swift; sourceTree = "<group>"; };
 		25055034280F5F6E00BC741C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		25055036280F631100BC741C /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		2505507528105E5C00BC741C /* extensionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionImage.swift; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		25F0C70D28178AAA0058816F /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
 		25F0C70F28178AE40058816F /* DogApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiRepository.swift; sourceTree = "<group>"; };
 		25F0C71328178C550058816F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		5F70D6E0C91DE94F2CD75E32 /* libPods-DogApiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DogApiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		805AB8FFD91D24DE54FC4FBC /* Pods-DogApiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogApiTests.release.xcconfig"; path = "Target Support Files/Pods-DogApiTests/Pods-DogApiTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEBC42A3A267378CF1F05011 /* Pods-DogApiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogApiTests.debug.xcconfig"; path = "Target Support Files/Pods-DogApiTests/Pods-DogApiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F6ECC9F475C20AE185C4BC /* libPods-DogApiTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,8 @@
 				25055008280F0E2800BC741C /* DogApiTests */,
 				25055012280F0E2800BC741C /* DogApiUITests */,
 				25054FF0280F0E2500BC741C /* Products */,
+				DB85B73AD9C430A241C31341 /* Pods */,
+				848FFC5FADAEE1AB49FFC066 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +153,8 @@
 		25055008280F0E2800BC741C /* DogApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				25055009280F0E2800BC741C /* DogApiTests.swift */,
+				2599D0F2282302C700646B1D /* Data */,
+				2599D0F12822C7D100646B1D /* Network */,
 			);
 			path = DogApiTests;
 			sourceTree = "<group>";
@@ -185,6 +193,21 @@
 				2599D0EF2821B82800646B1D /* PicturesUserCase.swift */,
 			);
 			path = UserCase;
+			sourceTree = "<group>";
+		};
+		2599D0F12822C7D100646B1D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				25055009280F0E2800BC741C /* CallApiDogTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2599D0F2282302C700646B1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		25F0C702281788830058816F /* Domain */ = {
@@ -235,7 +258,7 @@
 		25F0C71128178C0D0058816F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				25055030280F169900BC741C /* ApiCall.swift */,
+				25055030280F169900BC741C /* CallApiDog.swift */,
 				25F0C71228178C270058816F /* Model */,
 			);
 			path = Network;
@@ -247,6 +270,23 @@
 				25F0C71328178C550058816F /* APIError.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		848FFC5FADAEE1AB49FFC066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F70D6E0C91DE94F2CD75E32 /* libPods-DogApiTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB85B73AD9C430A241C31341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEBC42A3A267378CF1F05011 /* Pods-DogApiTests.debug.xcconfig */,
+				805AB8FFD91D24DE54FC4FBC /* Pods-DogApiTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2505501C280F0E2800BC741C /* Build configuration list for PBXNativeTarget "DogApiTests" */;
 			buildPhases = (
+				EBD07B07812E32A0DAF4B604 /* [CP] Check Pods Manifest.lock */,
 				25055001280F0E2800BC741C /* Sources */,
 				25055002280F0E2800BC741C /* Frameworks */,
 				25055003280F0E2800BC741C /* Resources */,
@@ -374,6 +415,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EBD07B07812E32A0DAF4B604 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DogApiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25054FEB280F0E2500BC741C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,7 +458,7 @@
 				25055029280F141E00BC741C /* ExtensionUiview.swift in Sources */,
 				2599D0F02821B82800646B1D /* PicturesUserCase.swift in Sources */,
 				25054FF3280F0E2500BC741C /* AppDelegate.swift in Sources */,
-				25055031280F169900BC741C /* ApiCall.swift in Sources */,
+				25055031280F169900BC741C /* CallApiDog.swift in Sources */,
 				257486372819E5B20027B892 /* BreedListToArrayMapper.swift in Sources */,
 				25F0C71428178C550058816F /* APIError.swift in Sources */,
 				25F0C70E28178AAA0058816F /* DogRepository.swift in Sources */,
@@ -404,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2505500A280F0E2800BC741C /* DogApiTests.swift in Sources */,
+				2505500A280F0E2800BC741C /* CallApiDogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +680,7 @@
 		};
 		2505501D280F0E2800BC741C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBC42A3A267378CF1F05011 /* Pods-DogApiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -633,6 +700,7 @@
 		};
 		2505501E280F0E2800BC741C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805AB8FFD91D24DE54FC4FBC /* Pods-DogApiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
