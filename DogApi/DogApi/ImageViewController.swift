@@ -9,8 +9,8 @@ class ImageViewController: UIViewController {
     var breedList :  [String] = []
     
     var tableImageView = UITableView ()
-    var dogImagesRepository: DogRepository?
-    
+//    var dogImagesRepository: DogRepository?
+    var pictureUserCase : GetPicturesUseCase?
     
     struct Cells{
         static let mycell = "my cell"
@@ -24,7 +24,7 @@ class ImageViewController: UIViewController {
         configureTableImageView()
         
         print(dataContent)
-        dogImagesRepository?.fetchDogImages(nameBreed: dataContent) { breeds, error in
+        pictureUserCase?.execute(breed: dataContent) { breeds, error in
             //
             DispatchQueue.main.async {
                 guard let breeds = breeds else {

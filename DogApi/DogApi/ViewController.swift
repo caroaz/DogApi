@@ -8,7 +8,9 @@ class ViewController: UIViewController {
     
     var tableView = UITableView ()
     
-    var dogRepository: DogRepository?
+//    var dogRepository: DogRepository?
+    
+    var breedUseCase : GetBreedUseCase?
     
     struct Cells{
         static let mycell = "my cell"
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         title = "DogCeo"
         configureTableView()
         
-        dogRepository?.fetchDogBreeds{ dogs, error in
+        breedUseCase?.execute{ dogs, error in
             
             DispatchQueue.main.async {
                 guard let dogs = dogs else {
@@ -50,14 +52,10 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
-    
-    
+ 
 }
 
 
-
-//
 extension ViewController: UITableViewDataSource{
     
     //        indica cuantas celdas queremos que tenga nuestra tabla
@@ -82,8 +80,6 @@ extension ViewController: UITableViewDataSource{
         
     }
     
-    
-    
 }
 
 extension ViewController: UITableViewDelegate{
@@ -93,12 +89,15 @@ extension ViewController: UITableViewDelegate{
         
         let vcDetail = ImageViewController()
         vcDetail.dataContent = dogList[indexPath.row]
-      
+        
         
         let restApiCall = CallApiDog()
         let mapper = BreedListToArrayMapper()
-
-        vcDetail.dogImagesRepository = DogApiRepository(restApi: restApiCall, mapper: mapper)
+       
+        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper)
+//        let breedlist = GetBreedUseCase(dogRepository: repository)
+        
+        vcDetail.pictureUserCase = GetPicturesUseCase(dogRepository: repository)
         
         
         navigationController?.pushViewController(vcDetail, animated: true)

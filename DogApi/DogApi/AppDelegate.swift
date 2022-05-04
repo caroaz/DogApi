@@ -26,8 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        crear instancia viewController
         let viewController = ViewController()
         
-        
-        viewController.dogRepository = repository
+        let breedlist = GetBreedUseCase(dogRepository: repository)
+//        viewController.dogRepository = repository
+        viewController.breedUseCase = breedlist
 //        cambiar root ViewController() por instancia de viewController
         let navigationController = UINavigationController(rootViewController:  viewController)
         window?.rootViewController = navigationController
