@@ -9,8 +9,8 @@ class ImageViewController: UIViewController {
     var breedList :  [String] = []
     
     var tableImageView = UITableView ()
-    var callApi : ApiRest?
-    
+//    var dogImagesRepository: DogRepository?
+    var pictureUserCase : GetPicturesUseCase?
     
     struct Cells{
         static let mycell = "my cell"
@@ -23,15 +23,15 @@ class ImageViewController: UIViewController {
         view.backgroundColor = .white
         configureTableImageView()
         
-        
-        callApi?.fetchDataImages(nameBreed: dataContent) { breeds, error in
+        print(dataContent)
+        pictureUserCase?.execute(breed: dataContent) { breeds, error in
             //
             DispatchQueue.main.async {
                 guard let breeds = breeds else {
-                    print(error?.message ?? "error")
+                    print(error?.description ?? "Error")
                     return
                 }
-                self.breedList = breeds
+                self.breedList = breeds.message
                 self.tableImageView.reloadData()
             }
         }
