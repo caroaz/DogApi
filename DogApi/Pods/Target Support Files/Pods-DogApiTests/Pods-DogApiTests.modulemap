@@ -1,0 +1,6 @@
+module Pods_DogApiTests {
+  umbrella header "Pods-DogApiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

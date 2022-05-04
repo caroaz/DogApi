@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  DogApi
-//
-//  Created by Mobdev on 19-04-22.
-//
 
 import UIKit
 

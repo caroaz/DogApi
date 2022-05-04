@@ -5,11 +5,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var dogList :  [String] = []
-    
     var tableView = UITableView ()
-    
-//    var dogRepository: DogRepository?
-    
     var breedUseCase : GetBreedUseCase?
     
     struct Cells{
@@ -52,13 +48,11 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
- 
+    
 }
 
 
 extension ViewController: UITableViewDataSource{
-    
-    //        indica cuantas celdas queremos que tenga nuestra tabla
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -84,18 +78,15 @@ extension ViewController: UITableViewDataSource{
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        print(dogList[indexPath.row])
-        
         
         let vcDetail = ImageViewController()
         vcDetail.dataContent = dogList[indexPath.row]
         
-        
         let restApiCall = CallApiDog()
         let mapper = BreedListToArrayMapper()
-       
+        
         let repository = DogApiRepository(restApi: restApiCall, mapper: mapper)
-//        let breedlist = GetBreedUseCase(dogRepository: repository)
+        
         
         vcDetail.pictureUserCase = GetPicturesUseCase(dogRepository: repository)
         

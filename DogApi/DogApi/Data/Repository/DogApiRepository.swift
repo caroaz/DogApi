@@ -1,8 +1,8 @@
 class DogApiRepository: DogRepository {
-   
+    
     private let restApi: ApiRest
     private let breedMapper : Mapper<BreedsList, [String] >
-//    private let imageMapper : Mapper<PicturesList, [String]>?
+    //    private let imageMapper : Mapper<PicturesList, [String]>?
     
     init(restApi: ApiRest, mapper :  Mapper<BreedsList, [String] >) {
         self.restApi = restApi
@@ -31,9 +31,9 @@ class DogApiRepository: DogRepository {
             }
         }
     }
-   
-    }
     
-    
+}
+
+
 
 

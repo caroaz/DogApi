@@ -7,9 +7,7 @@ class ImageViewController: UIViewController {
     
     var dataContent : String = ""
     var breedList :  [String] = []
-    
     var tableImageView = UITableView ()
-//    var dogImagesRepository: DogRepository?
     var pictureUserCase : GetPicturesUseCase?
     
     struct Cells{
@@ -65,9 +63,7 @@ class ImageViewController: UIViewController {
     //        dataTask.resume()
     //        }
     
-    
-    
-    
+
     func configureTableImageView() {
         view.addSubview(tableImageView)
         setTableViewDelegates()
@@ -85,9 +81,6 @@ class ImageViewController: UIViewController {
     
 }
 
-
-
-//
 extension ImageViewController: UITableViewDataSource{
     
     
@@ -111,12 +104,10 @@ extension ImageViewController: UITableViewDataSource{
         
         
         return cell
-        
-        
+      
     }
-   
+    
 }
-
 
 extension ImageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
