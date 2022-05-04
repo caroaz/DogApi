@@ -29,6 +29,8 @@ class DogApiTests: XCTestCase {
         let response = response(with: body, status: 200)
         
         Mimic.mimic(request: request, response: response)
+        
+//        siempre que se trabaje con async se debe crear expectation o siempre el test funcionará, pero puede que este fallando
         let expectation = expectation(description: "TestSuccess")
         
         //    este test prueba que se devuelve un body no sea nulo y nulo el error No el status
