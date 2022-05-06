@@ -36,7 +36,7 @@ class DogApiRepositoryTests: XCTestCase {
     }
     
     func testFailureFetchDogBreeds(){
-        restApi.shouldFaile = true
+        restApi.shouldFail = true
         let expectation = expectation(description: "TestFailure")
         
         sut.fetchDogBreeds{list, error in
@@ -59,7 +59,7 @@ class DogApiRepositoryTests: XCTestCase {
     }
     
     func testFailureFetchDogImages(){
-        restApi.shouldFaile = true
+        restApi.shouldFail = true
         let expectation = expectation(description: "TestSuccess")
         
         sut.fetchDogImages(nameBreed: "asd"){list, error in
