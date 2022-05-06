@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(dogList)
+        
         
         view.backgroundColor = .white
         title = "DogCeo"
@@ -84,8 +84,9 @@ extension ViewController: UITableViewDelegate{
         
         let restApiCall = CallApiDog()
         let mapper = BreedListToArrayMapper()
+        let mapperPicture = PictureListToArrayMapper()
         
-        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper)
+        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper, imageMapper: mapperPicture)
         
         
         vcDetail.pictureUserCase = GetPicturesUseCase(dogRepository: repository)

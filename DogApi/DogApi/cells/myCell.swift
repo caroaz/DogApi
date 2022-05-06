@@ -33,15 +33,7 @@ class myCell: UITableViewCell {
 
           
         }
-    //
-
-   
-       
-        
-        
-        
-       
-        
+    
         private func configureNameLabel(){
             nameLabel.numberOfLines = 0
             nameLabel.adjustsFontSizeToFitWidth = true
@@ -50,16 +42,6 @@ class myCell: UITableViewCell {
         
        
             
-    //        expanded.toggle()
-            
-            
-    //        myButton.addTarget(self, action: #selector(buttonTap), for: .touchUpInside )
-            
-        
-    //
-        
-      
-    //
         private  func setNameLabelConstraint(){
             nameLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([

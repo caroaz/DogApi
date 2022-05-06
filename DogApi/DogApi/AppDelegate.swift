@@ -13,10 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    instancias clase CallApiDog
         let restApiCall = CallApiDog()
         let mapper  = BreedListToArrayMapper()
+        let mapperPicture = PictureListToArrayMapper()
         
 //        restapi : se instancia en DogApiRepository 
-        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper)
-        
+        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper, imageMapper: mapperPicture)
+     
 //        crear instancia viewController
         let viewController = ViewController()
         

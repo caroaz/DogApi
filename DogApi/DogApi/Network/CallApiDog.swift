@@ -18,7 +18,7 @@ class CallApiDog: ApiRest {
                 return}
             
             guard  let breedsList = try? JSONDecoder().decode(BreedsList.self, from: data) else {
-                onCompletion(nil, APIError(errorMessage: "Invalid model"))
+                onCompletion(nil, APIError(errorMessage: "Invalid request"))
                 return
             }
             
