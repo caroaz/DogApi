@@ -82,14 +82,12 @@ extension ViewController: UITableViewDelegate{
         let vcDetail = ImageViewController()
         vcDetail.dataContent = dogList[indexPath.row]
         
-        let restApiCall = CallApiDog()
-        let mapper = BreedListToArrayMapper()
-        let mapperPicture = PictureListToArrayMapper()
-        
-        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper, imageMapper: mapperPicture)
         
         
-        vcDetail.pictureUserCase = GetPicturesUseCase(dogRepository: repository)
+        let pictureUseCase = DogCeoServiceLocator().pictureUseCase
+        
+        
+        vcDetail.pictureUserCase = pictureUseCase
         
         
         navigationController?.pushViewController(vcDetail, animated: true)
