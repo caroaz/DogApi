@@ -10,9 +10,10 @@ class DogApiRepositoryTests: XCTestCase {
         super.setUp()
         
         restApi = ApiRestMock()
-//        restApi.shloudFaile = true
+        //        restApi.shloudFaile = true
         let mapper =  BreedListToArrayMapper()
-        sut = DogApiRepository(restApi: restApi, mapper: mapper)
+        let imageMapper = PictureListToArrayMapper()
+        sut = DogApiRepository(restApi: restApi, mapper: mapper, imageMapper: imageMapper)
     }
     
     override func tearDown() {
@@ -22,7 +23,7 @@ class DogApiRepositoryTests: XCTestCase {
         
     }
     
-    func testSuccess(){
+    func testSuccessFetchDogBreeds(){
         
         let expectation = expectation(description: "TestSuccess")
         
@@ -34,13 +35,37 @@ class DogApiRepositoryTests: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     
-    func testFailure(){
+    func testFailureFetchDogBreeds(){
         restApi.shouldFaile = true
-        let expectation = expectation(description: "TestSuccess")
+        let expectation = expectation(description: "TestFailure")
         
         sut.fetchDogBreeds{list, error in
             XCTAssertNil(list)
             XCTAssertNotNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+    }
+    func testSuccessFetchDogImages(){
+        
+        let expectation = expectation(description: "TestSuccess")
+        
+        sut.fetchDogImages(nameBreed: "asd"){list, error in
+            XCTAssertNotNil(list)
+            XCTAssertNil(error)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2)
+    }
+    
+    func testFailureFetchDogImages(){
+        restApi.shouldFaile = true
+        let expectation = expectation(description: "TestSuccess")
+        
+        sut.fetchDogImages(nameBreed: "asd"){list, error in
+            XCTAssertNil(list)
+            XCTAssertNotNil(error)
+            //            XCTAssertEqual( "", "Error Generico")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 2)
