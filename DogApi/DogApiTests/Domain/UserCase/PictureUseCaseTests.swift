@@ -1,19 +1,18 @@
 
-
 import XCTest
 @testable import DogApi
 
-class BreedUserCaseTests: XCTestCase {
+class PictureUseCaseTests: XCTestCase {
     
     
-    var sut : GetBreedUseCase!
+    var sut : GetPicturesUseCase!
     var dogrepository: DogApiRepositoryMock!
     
     override func setUp(){
         super.setUp()
         
         dogrepository = DogApiRepositoryMock()
-        sut = GetBreedUseCase(dogRepository: dogrepository)
+        sut = GetPicturesUseCase(dogRepository: dogrepository)
     }
     //
     override func tearDown(){
@@ -23,10 +22,10 @@ class BreedUserCaseTests: XCTestCase {
         dogrepository = nil
     }
     
-    func testGetBreedUseCase() {
+    func testsGetPictureUseCase() {
         let expectation = expectation(description: "TestSuccess")
         
-        sut.execute {list, error in
+        sut.execute(breed: "akita") {list, error in
             XCTAssertNotNil(list)
             XCTAssertNil(error)
             expectation.fulfill()
@@ -34,11 +33,11 @@ class BreedUserCaseTests: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     
-    func testFailGetBreedUseCase (){
-        dogrepository.shouldFaile = true
+    func testsFailGetPictureUseCase (){
+        dogrepository.shouldFail = true
         let expectation = expectation(description: "TestFailure")
         
-        sut.execute{list, error in
+        sut.execute(breed: "akds"){list, error in
             XCTAssertNil(list)
             XCTAssertNotNil(error)
             expectation.fulfill()

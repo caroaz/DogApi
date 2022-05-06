@@ -3,11 +3,11 @@
 
 class ApiRestMock : ApiRest{
     
-    var shouldFaile = false
+    var shouldFail = false
     
     func fetchApiData(onCompletion: @escaping ([String]?, APIError?) -> Void) {
         
-        if shouldFaile {
+        if shouldFail {
             onCompletion(nil, APIError(errorMessage: ""))
             
         }
@@ -19,7 +19,7 @@ class ApiRestMock : ApiRest{
     
     
     func fetchDataImages(nameBreed: String, onCompletion: @escaping ([String]?, APIError?) -> Void) {
-        if shouldFaile {
+        if shouldFail {
             onCompletion(nil, APIError(errorMessage: ""))
             
         }

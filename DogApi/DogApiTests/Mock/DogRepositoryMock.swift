@@ -7,9 +7,9 @@ import Foundation
 
 class DogApiRepositoryMock : DogRepository {
     
-    var shouldFaile = false
+    var shouldFail = false
     func fetchDogBreeds(onCompletion: @escaping (BreedsList?, DomainError?) -> Void) {
-        if shouldFaile {
+        if shouldFail {
             onCompletion(nil, DomainError(description:  "Error Generico"))
             
         }
@@ -21,7 +21,7 @@ class DogApiRepositoryMock : DogRepository {
     }
     
     func fetchDogImages(nameBreed: String, onCompletion: @escaping (PicturesList?, DomainError?) -> Void) {
-        if shouldFaile {
+        if shouldFail {
             onCompletion(nil, DomainError(description:  "Error Generico"))
             
         }
