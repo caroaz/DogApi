@@ -10,20 +10,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
-//    instancias clase CallApiDog
-        let restApiCall = CallApiDog()
-        let mapper  = BreedListToArrayMapper()
-        let mapperPicture = PictureListToArrayMapper()
-        
-//        restapi : se instancia en DogApiRepository 
-        let repository = DogApiRepository(restApi: restApiCall, mapper: mapper, imageMapper: mapperPicture)
      
 //        crear instancia viewController
         let viewController = ViewController()
-        
-        let breedlist = GetBreedUseCase(dogRepository: repository)
-//        viewController.dogRepository = repository
-        viewController.breedUseCase = breedlist
+
+        viewController.breedUseCase = DogCeoServiceLocator().breedUseCase
 //        cambiar root ViewController() por instancia de viewController
         let navigationController = UINavigationController(rootViewController:  viewController)
         window?.rootViewController = navigationController
