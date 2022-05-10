@@ -1,15 +1,14 @@
-
 import XCTest
 @testable import DogApi
 import Mimic
 
-class DogApiTests: XCTestCase {
+class DogApiAlamofireTests: XCTestCase {
     
-    var sut : CallApiDog!
+    var sut : ApiDogAlamofire!
     
     override func setUp() {
         Mimic.start()
-        sut = CallApiDog()
+        sut = ApiDogAlamofire()
         super.setUp()
     }
     override func tearDown() {
@@ -17,7 +16,6 @@ class DogApiTests: XCTestCase {
         sut = nil
         super.tearDown()
     }
-    
     func testSuccessFetchApiData(){
         let request = request(with: .get, url: "https://dog.ceo/api/breeds/list")
         //        request interrumple el proceso de un get a un endpoint
@@ -25,15 +23,13 @@ class DogApiTests: XCTestCase {
             "message": ["affenpinscher", "african"],
             "status": "success"
         ]
-        //        response , responde con un objeto Body con status 200
+        
         let response = response(with: body, status: 200)
         
         Mimic.mimic(request: request, response: response)
-        
-        //        siempre que se trabaje con async se debe crear expectation o siempre el test funcionará, pero puede que este fallando
-        let expectation = expectation(description: "TestSuccess")
-        
-        //    este test prueba que se devuelve un body no sea nulo y nulo el error No el status
+     
+        let expectation = expectation(description: "Test Success Fetch API Data")
+   
         sut .fetchApiData { list, error in
             XCTAssertNotNil(list)
             XCTAssertNil(error)
@@ -42,7 +38,7 @@ class DogApiTests: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     //    testear error
-    func testIncorrectModelFetchApiData(){
+    func testIncorrectFetchApiData(){
         let request = request(with: .get, url: "https://dog.ceo/api/breeds/list")
         
         let body : [String: Any] = [
@@ -53,12 +49,11 @@ class DogApiTests: XCTestCase {
         let response = response(with: body, status: 200)
         
         Mimic.mimic(request: request, response: response)
-        let expectation = expectation(description: "TestSuccess")
-        
-        //        este test prueba que el response sea un listado nulo y error no nulo
-        sut .fetchApiData { list, error in
+        let expectation = expectation(description: "Test Success Incorrect Model")
+      
+        sut.fetchApiData { list, error in
             XCTAssertNil(list)
-            XCTAssertNotNil(error)
+//            XCTAssertNotNil(error)
             XCTAssertEqual(error?.errorMessage, "Invalid request")
             expectation.fulfill()
         }
@@ -68,7 +63,7 @@ class DogApiTests: XCTestCase {
     
     func testSuccessFetchDataImages(){
         let request = request(with: .get, url: "https://dog.ceo/api/breed/african/images")
-        //        request interrumple el proceso de un get a un endpoint
+        
         let body : [String: Any] = [
             "message": [ "african"],
             "status": "success"
@@ -98,8 +93,7 @@ class DogApiTests: XCTestCase {
         
         Mimic.mimic(request: request, response: response)
         let expectation = expectation(description: "TestSuccess")
-        
-        //        este test prueba que el response sea un listado nulo y eror no nulo
+      
         sut .fetchDataImages(nameBreed: "asd" ) { list, error in
             XCTAssertNil(list)
             XCTAssertNotNil(error)
@@ -108,4 +102,5 @@ class DogApiTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 2)
     }
+    
 }
