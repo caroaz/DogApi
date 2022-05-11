@@ -10,11 +10,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
-     
+     let presenter = BreedListPresenter(breedUseCase: DogCeoServiceLocator().breedUseCase)
 //        crear instancia viewController
-        let viewController = ViewController()
+        let viewController = BreedListViewController(
+            viewDataSource: BreedListDataSource(),
+            viewDelegate: BreedListDelegate(),
+            presenter: presenter)
 
-        viewController.breedUseCase = DogCeoServiceLocator().breedUseCase
+        presenter.view = viewController
+//        viewController.breedUseCase = DogCeoServiceLocator().breedUseCase
 //        cambiar root ViewController() por instancia de viewController
         let navigationController = UINavigationController(rootViewController:  viewController)
         window?.rootViewController = navigationController
