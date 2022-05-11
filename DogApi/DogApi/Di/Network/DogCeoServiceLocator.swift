@@ -4,7 +4,8 @@ import Foundation
 
 class DogCeoServiceLocator {
     
-        private let restApi = CallApiDog()
+    
+        private let restApi = ApiDogAlamofire()
         private let breedMapper = BreedListToArrayMapper()
         private let pictureMapper = PictureListToArrayMapper()
         

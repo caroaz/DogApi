@@ -55,7 +55,7 @@ class DogApiTests: XCTestCase {
         Mimic.mimic(request: request, response: response)
         let expectation = expectation(description: "TestSuccess")
         
-        //        este test prueba que el response sea un listado nulo y eror no nulo
+        //        este test prueba que el response sea un listado nulo y error no nulo
         sut .fetchApiData { list, error in
             XCTAssertNil(list)
             XCTAssertNotNil(error)

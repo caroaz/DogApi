@@ -3,17 +3,22 @@
 import UIKit
 
 class ImageViewController: UIViewController {
-    
+    var imageViewDatasource = ImageViewDataSource ()
+    var imageViewDelegate = ImageViewDelegate()
     
     var dataContent : String = ""
     var breedList :  [String] = []
     var tableImageView = UITableView ()
     var pictureUserCase : GetPicturesUseCase?
     
-    struct Cells{
-        static let mycell = "my cell"
+    //    struct Cells{
+    //        static let mycell = "my cell"
+    //    }
+    convenience init(imageViewDatasource:ImageViewDataSource){
+        self.init()
+        self.imageViewDatasource = imageViewDatasource
+        
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,56 +68,25 @@ class ImageViewController: UIViewController {
     //        dataTask.resume()
     //        }
     
-
+    
     func configureTableImageView() {
         view.addSubview(tableImageView)
         setTableViewDelegates()
         tableImageView.estimatedRowHeight = 200
         tableImageView.rowHeight = UITableView.automaticDimension
         
-        tableImageView.register(ImageViewCell.self, forCellReuseIdentifier: Cells.mycell)
+        tableImageView.register(ImageViewCell.self, forCellReuseIdentifier: "cellImage")
         tableImageView.pin(to :view)
         
     }
     func setTableViewDelegates(){
-        tableImageView.dataSource = self
-        tableImageView.delegate = self
+        tableImageView.dataSource =  imageViewDatasource
+        imageViewDatasource.view = self
+        
+        tableImageView.delegate = imageViewDelegate
+        imageViewDelegate.view = self
     }
     
 }
 
-extension ImageViewController: UITableViewDataSource{
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return breedList.count
-        
-        
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:Cells.mycell, for: indexPath as IndexPath) as? ImageViewCell else { return UITableViewCell()}
-        
-        cell.resultsBreedName =  breedList[indexPath.row]
-        
-        cell.prepare()
-        
-        
-        return cell
-      
-    }
-    
-}
-
-extension ImageViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
-}
 
