@@ -10,17 +10,11 @@ extension BreedListDelegate: UITableViewDelegate{
         guard let view = view else {
             return
         }
-        let vcDetail = ImageViewController(imageViewDatasource: ImageViewDataSource())
+
+        let vcDetail = ViewControllerFactory.makeImageListViewController()
+     
         vcDetail.dataContent = view.dogList[indexPath.row].name
-        
-        
-        
-        let pictureUseCase = DogCeoServiceLocator().pictureUseCase
-        
-        
-        vcDetail.pictureUserCase = pictureUseCase
-        
-        
+ 
         view.navigationController?.pushViewController(vcDetail, animated: true)
     }
 }

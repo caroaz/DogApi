@@ -11,6 +11,7 @@ class DogApiRepositoryTests: XCTestCase {
         
         restApi = ApiRestMock()
         //        restApi.shloudFaile = true
+        
         let mapper =  BreedListToArrayMapper()
         let imageMapper = PictureListToArrayMapper()
         sut = DogApiRepository(restApi: restApi, mapper: mapper, imageMapper: imageMapper)

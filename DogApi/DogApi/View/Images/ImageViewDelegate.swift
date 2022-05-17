@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 class ImageViewDelegate: NSObject {
     
-    weak var view : ImageViewController?
+    weak var view : ImageListViewController?
     
 }
 extension ImageViewDelegate: UITableViewDelegate{
