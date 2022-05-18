@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 
 class ImageViewDataSource : NSObject {
-    weak var view : ImageViewController?
+    weak var view : ImageListViewController?
     
 }
 extension ImageViewDataSource: UITableViewDataSource {
@@ -21,7 +21,7 @@ extension ImageViewDataSource: UITableViewDataSource {
             
         }
         
-        cell.resultsBreedName =  view?.breedList[indexPath.row]
+        cell.resultsBreedName =  view?.breedList[indexPath.row].name
         
         cell.prepare()
         

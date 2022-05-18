@@ -50,7 +50,6 @@ class BreedListViewController: UIViewController {
     
 }
 
-
 extension BreedListViewController: BreedListView{
     func display(_ list: [BreedsViewModel]) {
         dogList = list
