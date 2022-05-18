@@ -35,5 +35,14 @@ class BreedListDataSourceTests: XCTestCase {
         XCTAssertEqual( rows, 0)
     }
     
+    func testCellForRowAtIndexPath (){
+        let viewController = BreedListViewController()
+        viewController.dogList = [BreedsViewModel(name: "asdf")]
+        sut.view = viewController
+        viewController.viewDidLoad()
+        let tableview = viewController.view.subviews[0] as! UITableView
+        let cell = sut.tableView(tableview, cellForRowAt: IndexPath(row: 0, section: 0)) as! myCell
+        XCTAssertEqual( cell.results, "asdf")
+    }
 
 }
