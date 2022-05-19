@@ -34,13 +34,14 @@ class ImageListDataSourceTests: XCTestCase {
         XCTAssertEqual( rows, 0)
     }
     
-//    func testCellForRowAtIndexPath (){
-//        let viewController = ImageListViewController()
-//        viewController.breedList = [ImageViewModel(name: "asdf")]
-//        sut.view = viewController
-//        viewController.viewDidLoad()
-//        let tableview = viewController.view.subviews[0] as! UITableView
-//        let cell = sut.tableView(tableview, cellForRowAt: IndexPath(row: 0, section: 0)) as! ImageViewCell
-////        XCTAssertEqual( cell., 0)
-//    }
+    func testCellForRowAtIndexPath (){
+        let viewController = ImageListViewController()
+        viewController.breedList = [ImageViewModel(name: "asdf")]
+        sut.view = viewController
+        viewController.viewDidLoad()
+        let tableview = viewController.view.subviews[0] as! UITableView
+        let cell = sut.tableView(tableview, cellForRowAt: IndexPath(row: 0, section: 0)) as! ImageViewCell
+        XCTAssertEqual( cell.resultsBreedName, "asdf")
+    }
+
 }

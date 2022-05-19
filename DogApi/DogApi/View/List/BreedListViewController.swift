@@ -51,6 +51,16 @@ class BreedListViewController: UIViewController {
 }
 
 extension BreedListViewController: BreedListView{
+    
+    
+    func showNextVIewController(name: String) {
+        let vcDetail = ViewControllerFactory.makeImageListViewController()
+     
+        vcDetail.dataContent = name
+ 
+        self.navigationController?.pushViewController(vcDetail, animated: true)
+    }
+    
     func display(_ list: [BreedsViewModel]) {
         dogList = list
         tableView.reloadData()

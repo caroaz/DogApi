@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 
 class BreedListDataSource: NSObject {
-    weak var view : BreedListViewController?
+    weak var view : BreedListView?
     
 }
 extension BreedListDataSource: UITableViewDataSource{

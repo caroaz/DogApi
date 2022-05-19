@@ -1,8 +1,7 @@
-
 import Foundation
 import UIKit
 class BreedListDelegate : NSObject {
-    weak var view : BreedListViewController?
+    weak var view : BreedListView?
 }
 extension BreedListDelegate: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -10,11 +9,10 @@ extension BreedListDelegate: UITableViewDelegate{
         guard let view = view else {
             return
         }
-
-        let vcDetail = ViewControllerFactory.makeImageListViewController()
-     
-        vcDetail.dataContent = view.dogList[indexPath.row].name
+        
+        let cellContent = view.dogList[indexPath.row]
+        view.showNextVIewController(name: cellContent.name)
  
-        view.navigationController?.pushViewController(vcDetail, animated: true)
+      
     }
 }

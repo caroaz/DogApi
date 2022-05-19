@@ -20,4 +20,12 @@ class DogCeoServiceLocator {
                 return GetPicturesUseCase(dogRepository: repository)
             
         }
+    
+    var getBreedsViewModelToBreedsListMapper: BreedViewModelToModelMapper {
+            return BreedViewModelToModelMapper()
+        }
+        
+        var getPicturesViewModelToPicturesListMapper: ImageViewModelToModelMapper {
+            return ImageViewModelToModelMapper()
+        }
 }

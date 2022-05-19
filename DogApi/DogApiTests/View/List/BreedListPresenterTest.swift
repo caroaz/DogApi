@@ -4,47 +4,38 @@ import XCTest
 @testable import DogApi
 
 class BreedListPresenterTest: XCTestCase {
-    var sut : BreedListPresenter!
-    var dogrepository: DogApiRepositoryMock!
-    var breedUsecase: GetBreedUseCase!
-    var viewMock : BreedListMock!
-    
-//    var useCase: UseCaseMock!
-    
-    override func setUp() {
-        super.setUp()
-        
-        dogrepository = DogApiRepositoryMock()
-        
-    viewMock = BreedListMock()
-        breedUsecase = GetBreedUseCase(dogRepository: dogrepository)
-        let mapper = BreedViewModelToModelMapper()
-       sut = BreedListPresenter(breedUseCase: breedUsecase, breedMapper: mapper)
-        sut.view = viewMock
-    }
-
-    override func tearDown()  {
-        super.tearDown()
-       sut = nil
-        dogrepository = nil
-    }
-
-    func testSuccessGetBreedList() {
-        
-        
-        
-        sut.getBreedList()
-        XCTAssertTrue(viewMock.displayCalled)
-        XCTAssertFalse(viewMock.displayCalledError)
+    var sut: BreedListPresenter!
+        var breedsListView: BreedListViewMock!
+        var dogRepository: DogApiRepositoryMock!
+         
+        override func setUp() {
+            super.setUp()
+            let breedsArray = [BreedsViewModel(name: "asdf")]
+            breedsListView = BreedListViewMock(dogList: breedsArray)
+            dogRepository = DogApiRepositoryMock()
+            let getBreedsListUseCase = GetBreedUseCase(dogRepository: dogRepository)
+            let breedsMapper = BreedViewModelToModelMapper()
+            sut = BreedListPresenter(breedUseCase: getBreedsListUseCase, breedMapper: breedsMapper)
+            sut.view = breedsListView
         }
-
-    
-
-    func testFailGetBreedList(){
-        dogrepository.shouldFail = true
-        sut.getBreedList()
-        XCTAssertTrue(viewMock.displayCalledError)
-        XCTAssertFalse(viewMock.displayCalled)
         
-    }
+        override func tearDown() {
+            sut = nil
+            breedsListView = nil
+            dogRepository = nil
+            super.tearDown()
+        }
+        
+        func testGetBreedsListSuccess() {
+            sut.getBreedList()
+            XCTAssertTrue(breedsListView.displayListCalled)
+            XCTAssertFalse(breedsListView.displayErrorCalled)
+        }
+        
+        func testGetBreedsListFailure() {
+            dogRepository.shouldFail = true
+            sut.getBreedList()
+            XCTAssertTrue(breedsListView.displayErrorCalled)
+            XCTAssertFalse(breedsListView.displayListCalled)
+        }
 }
