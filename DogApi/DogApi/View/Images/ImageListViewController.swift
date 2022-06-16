@@ -8,13 +8,11 @@ class ImageListViewController: UIViewController {
     private var presenter : ImageListPresenterProtocol?
     
     var dataContent : String = ""
-    var breedList :  [ImageViewModel] = []
+    var picturesList :  [ImageViewModel] = []
     var tableImageView = UITableView ()
     var pictureUserCase : GetPicturesUseCase?
     
-    //    struct Cells{
-    //        static let mycell = "my cell"
-    //    }
+
     convenience init(imageViewDatasource:ImageViewDataSource, imageViewDelegate: ImageViewDelegate, presenter : ImageListPresenterProtocol){
         self.init()
         self.imageViewDatasource = imageViewDatasource
@@ -67,7 +65,7 @@ class ImageListViewController: UIViewController {
 }
 extension ImageListViewController: ImageListView{
     func display(_ list: [ImageViewModel]) {
-        breedList = list
+        picturesList = list
         tableImageView.reloadData()
     }
     

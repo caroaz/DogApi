@@ -9,8 +9,6 @@ class myCell: UITableViewCell {
             didSet {
                 
                 self.nameLabel.text = results
-                
-
             }
         }
         
