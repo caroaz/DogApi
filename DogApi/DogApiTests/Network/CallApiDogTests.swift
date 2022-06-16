@@ -8,9 +8,10 @@ class DogApiTests: XCTestCase {
     var sut : CallApiDog!
     
     override func setUp() {
+        super.setUp()
         Mimic.start()
         sut = CallApiDog()
-        super.setUp()
+        
     }
     override func tearDown() {
         Mimic.stopAllMimics()

@@ -7,9 +7,10 @@ class DogApiAlamofireTests: XCTestCase {
     var sut : ApiDogAlamofire!
     
     override func setUp() {
+        super.setUp()
         Mimic.start()
         sut = ApiDogAlamofire()
-        super.setUp()
+        
     }
     override func tearDown() {
         Mimic.stopAllMimics()

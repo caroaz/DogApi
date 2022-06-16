@@ -3,4 +3,7 @@
 protocol BreedListView: AnyObject {
     func display (_ list : [BreedsViewModel])
     func displayError ()
+    func showNextVIewController(name: String)
+    
+    var dogList: [BreedsViewModel] { get set }
 }

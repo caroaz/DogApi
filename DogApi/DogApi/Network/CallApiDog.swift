@@ -46,7 +46,7 @@ class CallApiDog: ApiRest {
             }
             
             onCompletion(picturesList.message, nil)
-            
+            print(picturesList)
         }
         task.resume()
     }
